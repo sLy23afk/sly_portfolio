@@ -2,7 +2,6 @@ import React, { useEffect, useRef } from 'react';
 import { motion } from 'framer-motion';
 import { gsap } from 'gsap';
 import portfolioData from '../data/mockData';
-import TextTrail from './TextTrail/TextTrail';
 
 const Hero = () => {
   const heroRef = useRef(null);

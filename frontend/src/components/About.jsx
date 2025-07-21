@@ -3,6 +3,7 @@ import { motion } from 'framer-motion';
 import { gsap } from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import portfolioData from '../data/mockData';
+import BlurText from './blurAnimation';
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -142,7 +143,14 @@ const About = () => {
               viewport={{ once: true }}
             >
               <p className="text-lg leading-relaxed">
-                {portfolioData.personal.bio}
+                <BlurText
+                  text={portfolioData.personal.bio}
+                  delay={50}
+                  animateBy="words"
+                  direction="top"
+                  className="text-2xl mb-8"
+                />
+                {/* {portfolioData.personal.bio} */}
               </p>
 
               <div className="grid sm:grid-cols-2 gap-6 mt-8">

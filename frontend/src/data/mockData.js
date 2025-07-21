@@ -1,14 +1,17 @@
-// Mock data for Manas' portfolio
+// Data
+
+import avatarImage from './profilepic.JPG';
+
 export const portfolioData = {
   personal: {
     name: "Manash",
     alias: "Sly",
     title: "Creative Developer & Engineer",
     tagline: "Crafting digital experiences that blur the line between art and code",
-    bio: "I'm Manash, but you can call me Sly. I'm passionate about creating innovative web experiences that combine cutting-edge technology with compelling storytelling. My journey spans full-stack development, creative coding, and interactive design.",
+    bio: "I'm Manash, but you can call me 'Sly'. I'm passionate about creating innovative web experiences that combine cutting-edge technology with compelling storytelling. My journey spans full-stack development, creative coding, and interactive design.",
     email: "manashbhowmick13@gmail.com",
     location: "Currently Vadodara/Mumbai",
-    avatar: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=400&h=400&fit=crop&crop=face"
+    avatar: avatarImage 
   },
   
   skills: [
