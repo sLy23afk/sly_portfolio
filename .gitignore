@@ -78,3 +78,6 @@ agenthub/agents/youtube/db
 
 # Mobile development
 android-sdk/ 
+
+#Picture
+frontend/data/profile.JPG

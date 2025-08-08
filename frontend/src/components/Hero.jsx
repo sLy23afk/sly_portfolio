@@ -2,6 +2,7 @@ import React, { useEffect, useRef } from 'react';
 import { motion } from 'framer-motion';
 import { gsap } from 'gsap';
 import portfolioData from '../data/mockData';
+import TypewriterWithStatic from './typewriter';
 
 const Hero = () => {
   const heroRef = useRef(null);
@@ -104,14 +105,6 @@ const Hero = () => {
             transition={{ duration: 1.2, delay: 0.8 }}
             style={{ position: 'relative', height: '6rem' }}
           >
-            {/* <TextTrail
-              text={`Hey, I'm ${portfolioData.personal.name}`}
-              animateColor={true}
-              colorCycleInterval={1500}
-              noiseFactor={1.5}
-              noiseScale={0.002}
-              style={{ position: 'relative',size: "300px", pointerEvents: 'auto' }}
-            /> */}
             <span className="text-transparent bg-clip-text bg-gradient-to-r from-purple-400 via-pink-500 to-red-500 relative z-10">
               Hey, I'm {portfolioData.personal.name}
             </span>
@@ -125,7 +118,17 @@ const Hero = () => {
           >
             <span className="text-purple-400 font-semibold">"{portfolioData.personal.alias}"</span>
             <br />
-            {portfolioData.personal.title}
+            <div className ="font-bold" style={{ fontFamily: 'monospace', fontSize: "2em", margin: 20}}>
+              <TypewriterWithStatic
+                staticWord="Creative"
+                dynamicWords={["developer", "engineer", "editor", "designer"]}
+                typeSpeed={120}
+                deleteSpeed={60}
+                delay={1500}
+                loop={true}
+              />
+            </div>
+            {/* {portfolioData.personal.title} */}
           </motion.p>
           
           <motion.p
